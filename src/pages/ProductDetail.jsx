@@ -140,7 +140,7 @@ export default function ProductDetail() {
               >
                 −
               </button>
-              <span className="px-3 text-sm font-black text-slate-800 min-w-[2rem] text-center">{qty}</span>
+              <span className="px-3 text-sm font-black text-slate-800 min-w-8 text-center">{qty}</span>
               <button
                 type="button"
                 onClick={() => setQty((v) => Math.min(product.stock, v + 1))}

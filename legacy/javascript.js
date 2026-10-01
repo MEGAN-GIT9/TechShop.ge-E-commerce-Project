@@ -493,10 +493,10 @@ function initPromoMarquee() {
     const saleProducts = products.filter(p => p.badge === 'Sale' || p.badge === 'Hot');
     const doubleList = [...saleProducts, ...saleProducts];
     container.innerHTML = doubleList.map(p => `
-        <div onclick="window.location.hash='#product/${p.id}'" class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-xl px-4 py-2 cursor-pointer hover:bg-slate-100 transition-all flex-shrink-0 select-none">
+        <div onclick="window.location.hash='#product/${p.id}'" class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-xl px-4 py-2 cursor-pointer hover:bg-slate-100 transition-all shrink-0 select-none">
             <span class="text-2xl">${p.emoji}</span>
             <div>
-                <h4 class="text-xs font-black text-rose-600 truncate max-w-[140px]">${pName(p)}</h4>
+                <h4 class="text-xs font-black text-rose-600 truncate max-w-35">${pName(p)}</h4>
                 <p class="text-[10px] font-bold text-slate-900">₾${p.price}</p>
             </div>
             <span class="text-[9px] bg-rose-500 text-white px-1.5 py-0.5 font-extrabold rounded uppercase">${p.badge}</span>
@@ -529,18 +529,18 @@ function generateCards(list, targetGrid) {
         const card = document.createElement('div');
         card.className = "bg-white border border-slate-200/80 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col group";
         card.innerHTML = `
-            <a href="#product/${p.id}" class="block relative aspect-square bg-slate-50 flex items-center justify-center text-6xl border-b border-slate-100 select-none">
+            <a href="#product/${p.id}" class="block relative aspect-square bg-slate-50 items-center justify-center text-6xl border-b border-slate-100 select-none">
                 ${p.badge ? `<span class="absolute top-3 left-3 text-[10px] font-extrabold uppercase px-2 py-1 rounded-md shadow-sm ${badgeColor}">${p.badge}</span>` : ''}
                 <span class="group-hover:scale-110 transition-transform duration-300">${p.emoji}</span>
             </a>
-            <div class="p-5 flex-grow flex flex-col justify-between">
+            <div class="p-5 grow flex flex-col justify-between">
                 <div>
                     <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">${p.cat}</span>
                     <a href="#product/${p.id}" class="block text-sm font-bold text-slate-900 mt-1 hover:text-amber-600 transition-colors line-clamp-2">${pName(p)}</a>
                     <div class="flex items-center gap-1 text-amber-500 text-xs mt-2"><span>${'★'.repeat(p.stars)}${'☆'.repeat(5-p.stars)}</span><span class="text-slate-400 font-semibold ml-1">(${p.reviews})</span></div>
                 </div>
                 <div class="flex items-center justify-between mt-5 gap-2">
-                    <span class="text-base font-black text-slate-900 flex-shrink-0">₾${p.price.toLocaleString()}</span>
+                    <span class="text-base font-black text-slate-900 shrink-0">₾${p.price.toLocaleString()}</span>
                     <div class="flex items-center gap-1.5">
                         <button onclick="window.buyNow(${p.id})" class="h-9 px-3 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-xl text-xs font-bold transition-all shadow-sm">${t('buy')}</button>
                         <button id="btn-add-${p.id}" onclick="window.addToCart(${p.id})" class="h-9 w-9 bg-slate-900 text-white rounded-xl font-bold flex items-center justify-center text-lg transition-all shadow-sm">+</button>
@@ -640,7 +640,7 @@ function initLiveChat() {
             </span>
             <span class="text-2xl">💬</span>
         </button>
-        <div id="chatWindow" class="hidden absolute bottom-16 right-0 w-80 h-96 bg-white border border-slate-200 shadow-2xl rounded-2xl flex flex-col overflow-hidden transition-all">
+        <div id="chatWindow" class="hidden absolute bottom-16 right-0 w-80 h-96 bg-white border border-slate-200 shadow-2xl rounded-2xl flex-col overflow-hidden transition-all">
             <div class="bg-slate-900 text-white px-4 py-3 flex items-center gap-3">
                 <div class="w-8 h-8 rounded-full bg-amber-400 overflow-hidden flex items-center justify-center border border-white/20">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100" alt="Megi" class="w-full h-full object-cover">
@@ -896,15 +896,15 @@ function renderCartPage() {
         listContainer.innerHTML = cart.map(item => `
             <div class="flex items-center justify-between gap-4 py-4 border-b border-slate-100 last:border-0">
                 <div class="flex items-center gap-4 min-w-0 flex-1">
-                    <div class="w-14 h-14 bg-slate-50 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">${item.emoji}</div>
+                    <div class="w-14 h-14 bg-slate-50 rounded-xl flex items-center justify-center text-2xl shrink-0">${item.emoji}</div>
                     <div class="min-w-0 flex-1">
                         <div class="font-bold text-sm text-slate-900 truncate">${pName(item)}</div>
                         <div class="text-xs font-bold text-amber-600 mt-0.5">₾${item.price}</div>
                     </div>
                 </div>
-                <div class="flex items-center border border-slate-200 rounded-lg bg-slate-50 overflow-hidden flex-shrink-0">
+                <div class="flex items-center border border-slate-200 rounded-lg bg-slate-50 overflow-hidden shrink-0">
                     <button onclick="window.chQty(${item.id}, -1)" class="px-3 py-1 font-bold text-slate-500">−</button>
-                    <span class="px-2 text-xs font-bold text-slate-800 min-w-[20px] text-center">${item.qty}</span>
+                    <span class="px-2 text-xs font-bold text-slate-800 min-w-5 text-center">${item.qty}</span>
                     <button onclick="window.chQty(${item.id}, 1)" class="px-3 py-1 font-bold text-slate-500">+</button>
                 </div>
             </div>

@@ -33,7 +33,7 @@ export default function Login() {
   }
 
   return (
-    <div className="p-4 md:p-12 max-w-md mx-auto w-full flex-grow flex items-center justify-center">
+    <div className="p-4 md:p-12 max-w-md mx-auto w-full grow flex items-center justify-center">
       <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm w-full">
         <h1 className="text-2xl font-black text-slate-900 mb-2">
           {isRegister ? t('authRegisterTitle') : t('authLoginTitle')}

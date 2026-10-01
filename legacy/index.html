@@ -76,10 +76,10 @@
     </div>
 
     <!-- ================= 1. მთავარი გვერდი ================= -->
-    <div id="homeView" class="view-section p-4 md:p-12 max-w-7xl mx-auto w-full flex-grow">
+    <div id="homeView" class="view-section p-4 md:p-12 max-w-7xl mx-auto w-full grow">
         <!-- ბანერები -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-            <div class="lg:col-span-2 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-8 md:p-12 flex flex-col justify-between relative overflow-hidden shadow-md group min-h-[320px]">
+            <div class="lg:col-span-2 bg-linear-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-8 md:p-12 flex flex-col justify-between relative overflow-hidden shadow-md group min-h-80">
                 <div class="absolute right-0 bottom-0 text-[160px] md:text-[200px] opacity-20 select-none pointer-events-none transform translate-x-10 translate-y-10 group-hover:scale-110 transition-transform duration-500">⚡</div>
                 <div class="relative z-10 max-w-md">
                     <span data-i18n="bannerBadge" class="bg-amber-500 text-slate-950 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider">სუპერ შეთავაზება</span>
@@ -92,7 +92,7 @@
             </div>
 
             <div class="lg:col-span-1 flex flex-col gap-4">
-                <div class="flex-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-6 flex items-center justify-between relative overflow-hidden shadow-sm group min-h-[150px]">
+                <div class="flex-1 bg-linear-to-r from-amber-500 to-orange-600 rounded-2xl p-6 flex items-center justify-between relative overflow-hidden shadow-sm group min-h-37.5">
                     <div class="absolute -right-4 -bottom-4 text-7xl opacity-20 group-hover:rotate-12 transition-transform select-none">🎧</div>
                     <div class="relative z-10 max-w-[65%]">
                         <h3 data-i18n="promoAudioTitle" class="text-lg font-extrabold text-slate-950 leading-snug">Premium Audio</h3>
@@ -100,7 +100,7 @@
                         <a href="#product/1" data-i18n="promoAudioLink" class="inline-block mt-3 text-xs font-black text-slate-950 underline underline-offset-4 hover:text-white transition-colors">ნახვა →</a>
                     </div>
                 </div>
-                <div class="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-6 flex items-center justify-between relative overflow-hidden shadow-sm group min-h-[150px]">
+                <div class="flex-1 bg-linear-to-r from-cyan-500 to-blue-600 rounded-2xl p-6 flex items-center justify-between relative overflow-hidden shadow-sm group min-h-37.5">
                     <div class="absolute -right-4 -bottom-4 text-7xl opacity-20 group-hover:scale-110 transition-transform select-none">💻</div>
                     <div class="relative z-10 max-w-[65%]">
                         <h3 data-i18n="promoLaptopTitle" class="text-lg font-extrabold text-white leading-snug">Smart Laptops</h3>
@@ -113,8 +113,8 @@
 
         <!-- მოძრავი პრომო სლაიდერი -->
         <div class="mb-10 bg-white border border-slate-200 rounded-2xl py-4 overflow-hidden shadow-sm relative">
-            <div class="absolute top-0 left-0 bottom-0 bg-gradient-to-r from-white to-transparent w-12 z-10 pointer-events-none"></div>
-            <div class="absolute top-0 right-0 bottom-0 bg-gradient-to-l from-white to-transparent w-12 z-10 pointer-events-none"></div>
+            <div class="absolute top-0 left-0 bottom-0 bg-linear-to-r from-white to-transparent w-12 z-10 pointer-events-none"></div>
+            <div class="absolute top-0 right-0 bottom-0 bg-linear-to-l from-white to-transparent w-12 z-10 pointer-events-none"></div>
             <div class="overflow-hidden w-full">
                 <div id="promoMarquee" class="animate-marquee gap-8"></div>
             </div>
@@ -153,7 +153,7 @@
     </div>
 
     <!-- ================= 2. ფასდაკლებების გვერდი ================= -->
-    <div id="discountsView" class="view-section hidden p-4 md:p-12 max-w-7xl mx-auto w-full flex-grow">
+    <div id="discountsView" class="view-section hidden p-4 md:p-12 max-w-7xl mx-auto w-full grow">
         <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
                 <h2 data-i18n="discountsTitle" class="text-3xl font-black tracking-tight text-rose-600 flex items-center gap-2">🔥 ცხელი ფასდაკლებები</h2>
@@ -165,7 +165,7 @@
     </div>
 
     <!-- ================= 3. ავტორიზაციის გვერდი ================= -->
-    <div id="authView" class="view-section hidden p-4 md:p-12 max-w-md mx-auto w-full flex-grow flex items-center justify-center">
+    <div id="authView" class="view-section p-4 md:p-12 max-w-md mx-auto w-full grow flex items-center justify-center">
         <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm w-full">
             <h2 id="authTitle" class="text-2xl font-black text-slate-900 mb-2">სისტემაში შესვლა</h2>
             <p id="authSubtitle" data-i18n="authSubtitle" class="text-sm font-medium text-slate-400 mb-6">მიიღე წვდომა პრემიუმ ფუნქციებზე.</p>
@@ -198,7 +198,7 @@
     </div>
 
     <!-- ================= 4. ჩვენ შესახებ გვერდი ================= -->
-    <div id="aboutView" class="view-section hidden p-4 md:p-12 max-w-4xl mx-auto w-full flex-grow">
+    <div id="aboutView" class="view-section hidden p-4 md:p-12 max-w-4xl mx-auto w-full grow">
         <div class="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm">
             <span data-i18n="aboutKicker" class="text-xs font-extrabold uppercase tracking-widest text-amber-500">TechShop Electronics</span>
             <h2 data-i18n="aboutTitle" class="text-3xl font-black tracking-tight text-slate-900 mt-2 mb-6">ინოვაციური ონლაინ პლატფორმა</h2>
@@ -215,13 +215,13 @@
     </div>
 
     <!-- ================= 5. პროდუქტის შიდა გვერდი ================= -->
-    <div id="detailView" class="view-section hidden p-4 md:p-12 max-w-6xl mx-auto w-full flex-grow">
+    <div id="detailView" class="view-section hidden p-4 md:p-12 max-w-6xl mx-auto w-full grow">
         <button onclick="navigateTo('')" data-i18n="backToCatalogArrow" class="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900 bg-white border border-slate-200 px-4 py-2 rounded-xl shadow-sm transition-all">← კატალოგში დაბრუნება</button>
         <div id="productDetailContainer"></div>
     </div>
 
     <!-- ================= 6. კალათის და ჩექაუთის გვერდი ================= -->
-    <div id="cartView" class="view-section hidden p-4 md:p-12 max-w-7xl mx-auto w-full flex-grow">
+    <div id="cartView" class="view-section hidden p-4 md:p-12 max-w-7xl mx-auto w-full grow">
         <h2 data-i18n="checkoutTitle" class="text-2xl font-extrabold tracking-tight text-slate-900 mb-6">შეკვეთის გაფორმება</h2>
         
         <div id="checkoutLayout" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -303,7 +303,7 @@
     </div>
 
     <!-- ================= 7. პოლიტიკა / წესები და გარანტიები (Popups) ================= -->
-    <div id="policyModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div id="policyModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 max-h-[80vh] overflow-y-auto shadow-xl relative">
             <button onclick="closePolicy()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-900 font-bold text-xl">✕</button>
             <h3 id="policyModalTitle" class="text-xl font-black mb-4 text-slate-900">წესები და პირობები</h3>

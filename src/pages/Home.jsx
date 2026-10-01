@@ -42,7 +42,7 @@ export default function Home() {
     <div className="p-4 md:p-12 max-w-7xl mx-auto w-full">
       {/* Hero */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-        <div className="lg:col-span-2 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-8 md:p-12 flex flex-col justify-between relative overflow-hidden shadow-md group min-h-[320px]">
+        <div className="lg:col-span-2 bg-linear-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-8 md:p-12 flex flex-col justify-between relative overflow-hidden shadow-md group min-h-80">
           <div className="absolute right-0 bottom-0 text-[160px] md:text-[200px] opacity-20 select-none pointer-events-none translate-x-10 translate-y-10 group-hover:scale-110 transition-transform duration-500">
             ⚡
           </div>
@@ -75,7 +75,7 @@ export default function Home() {
                 catalog.setSearch('')
                 catalogRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
               }}
-              className={`flex-1 bg-gradient-to-r ${card.gradient} rounded-2xl p-6 flex items-center justify-between relative overflow-hidden shadow-sm group min-h-[100px] text-left`}
+              className={`flex-1 bg-linear-to-r ${card.gradient} rounded-2xl p-6 flex items-center justify-between relative overflow-hidden shadow-sm group min-h-25 text-left`}
             >
               <span className="absolute -right-4 -bottom-6 text-7xl opacity-20 group-hover:rotate-12 transition-transform select-none">
                 {card.emoji}
